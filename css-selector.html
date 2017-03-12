@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
+<meta name="renderer" content="webkit">
+<meta name="google" value="notranslate">
+<meta name="robots" content="index,follow">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="邓亮泉的博客">
+<meta name="twitter:description" content="一只程序猿的漫长道路。">
+<meta name="twitter:image:src" content="http://dlq.wiki/images/avatar.png">
+
+<meta property="og:url" content="http://dlq.wiki">
+<meta property="og:title" content="邓亮泉的博客">
+<meta property="og:description" content="一只程序猿的漫长道路。">
+<meta property="og:site_name" content="邓亮泉的博客">
+<meta property="og:image" content="http://dlq.wiki/images/avatar.png">
+<meta property="og:type" content="website">
+<meta name="robots" content="noodp">
+
+<meta itemprop="name" content="邓亮泉的博客">
+<meta itemprop="description" content="一只程序猿的漫长道路。">
+<meta itemprop="image" content="http://dlq.wiki/images/avatar.png">
+
+<link rel="canonical" href="http://dlq.wiki">
+
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-itouch-icon" href="/favicon.png">
+<link rel="stylesheet" href="/bundle/index.css">
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '年前',
+        month: '个月前',
+        day: '天前',
+        hour: '小时前',
+        minute: '分钟前',
+        second: '秒前'
+    };
+    var root = '';
+</script>
+
+
+        <meta name="keywords" content="前端,">
+        <meta name="description" content="CSS选择器简明">
+        <meta name="author" content="邓亮泉">
+        <title>CSS选择器简明</title>
+    </head>
+    <body>
+        <article class="container">
+            <header class="header-wrap">
+  <a class="index" href="/">
+    <img class="logo" src="/images/avatar.png" />
+    邓亮泉的博客
+  </a>
+  <ul class="menu">
+      <li class="menu-item"><a href="/archive.html">归档</a></li>
+      <li class="menu-item"><a href="/tag.html">标签</a></li>
+      <li class="menu-item"><a href="https://www.github.com/dengliangquan/">Github</a></li>
+  </ul>
+</header>
+
+            <article class="main article">
+                <h1 class="title">CSS选择器简明</h1>
+                <section class="info">
+                    <span class="avatar" style="background-image: url(/images/avatar.png);"></span>
+                    <a class="name" href="/about.me.html">邓亮泉</a>
+                    
+                    <span class="date" data-time="1489199570"><span class="from"></span></span>
+                    
+                    <span class="tags"><a class="tag" href="/tag/%e5%89%8d%e7%ab%af/index.html">前端</a></span>
+                </section>
+                <article class="content"><p>简略说一下文章的大纲
+* 标签选择器
+* 类选择器
+* ID选择器
+* 后代选择器
+* 子元素选择器
+* 相邻元素选择器
+* 属性选择器
+* 选择器的覆盖</p>
+
+<h2>标签选择器</h2>
+
+<pre><code>h1{
+	color: red;
+}
+</code></pre>
+
+<p><code>&lt;h1&gt;我的文字将会变成红色&lt;/h1&gt;</code>
+标签选择器就是让样式按照指定的标签去匹配需要应用这个样式的元素</p>
+
+<h2>类选择器</h2>
+
+<pre><code>.error{
+	color: red;
+	padding: 15px;
+  border: 1px #ccc red;
+}
+</code></pre>
+
+<p><code>&lt;div class=“error”&gt;错误提示&lt;/div&gt;</code>
+类选择器就是让样式按照<code>class=&quot;样式&quot;</code>的方式去匹配需要应用这个样式的元素</p>
+
+<h2>ID选择器</h2>
+
+<pre><code>#intro{
+	line-height:1.5;
+}
+</code></pre>
+
+<p><code>&lt;p id=&quot;intro&quot;&gt;简介... ba la ba ba la 如果你想看行高的效果的话，可以一直输入到换行，或者调整浏览器宽度至换行&lt;/p&gt;</code>
+同上，顾名思义让样式按照<code>id=“ID的方式”</code>去匹配</p>
+
+<h2>后代选择器</h2>
+
+<pre><code>nav li{
+  background: red;
+}
+</code></pre>
+
+<pre><code>&lt;ul class=&quot;nav&quot;&gt;
+  &lt;li&gt;Home&lt;/li&gt;
+  &lt;li&gt;Tags&lt;/li&gt;
+  &lt;li&gt;Abount&lt;/li&gt;
+  &lt;li&gt;User&lt;/li&gt;
+  &lt;ul&gt;
+   &lt;li&gt;Settings&lt;/li&gt;
+   &lt;li&gt;Logout&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>通过以上示例可以看到<code>nav</code>下的子元素 <code>li</code>标签和其它子元素下的子元素<code>li</code>标签的背景色都被设置成了红色。</p>
+
+<h2>子元素选择器</h2>
+
+<pre><code>nav&gt;li{
+  background: red;
+}
+</code></pre>
+
+<pre><code>&lt;ul class=&quot;nav&quot;&gt;
+  &lt;li&gt;Home&lt;/li&gt;
+  &lt;li&gt;Tags&lt;/li&gt;
+  &lt;li&gt;Abount&lt;/li&gt;
+  &lt;li&gt;User&lt;/li&gt;
+  &lt;ul&gt;
+   &lt;li&gt;Settings&lt;/li&gt;
+   &lt;li&gt;Logout&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;
+
+</code></pre>
+
+<p>通过以上示例可以看到<code>nav</code>下的子元素 <code>li</code>标签的背景色应用了样式被设置成了红色，其它子元素下的<code>li</code>标签并没有应用样式。但是需要注意的是子元素选择器在IE7中有BUG，如果父元素和子元素之间有HTML注释的话，后面所有跟有注释的子选择器的选择器会被忽略，IE7的更高版本都是支持子元素选择器的，如果想在IE7或者IE8上使用类似于子选择器的效果可以参照以下示例</p>
+
+<pre><code>.nav li{
+  background: red;
+}
+
+.nav li *{
+  background: none;
+}
+</code></pre>
+
+<h2>相邻元素选择器</h2>
+
+<pre><code>h1 + p {
+  font-weight: bold;
+}
+</code></pre>
+
+<pre><code>&lt;h1&gt;文章标题&lt;/h1&gt;
+&lt;p&gt;提示&lt;/p&gt;
+&lt;p&gt;内容 ba la ba la&lt;/p&gt;
+</code></pre>
+
+<p>通过以上示例我们可以看到相邻元素选择器只会对根据元素顺序下的下一个元素起作用，但是要注意IE，相邻元素选择器只在IE7(S)、IE8(S)或更高版本使用。</p>
+
+<h3>属性选择器</h3>
+
+<pre><code>input[type=&quot;text&quot;]{
+  border: 1px solid #ccc;
+}
+
+a[data-href]{
+	color: red;
+}
+</code></pre>
+
+<pre><code>&lt;input type=&quot;text&quot; name=&quot;username&quot; &gt;
+&lt;a data-href=&quot;https://www.google.com.hk/&quot;&gt;跳转&lt;/a&gt;
+</code></pre>
+
+<p>通过示例可以看到属性选择器只会对HTML代码中满足属性选择器的表达式的元素才会起作用</p>
+
+<h2>选择器的覆盖</h2>
+
+<pre><code>.error{
+	color: blue;
+}
+.error{
+	color: red;
+}
+</code></pre>
+
+<p>前者会被后者替换掉，接下来说一下选择器的优先级
+<code>style=“”</code> &gt; <code>id</code> &gt; <code>class</code> &gt;<code>标签</code>  选择器是可以一起使用的，那浏览器是如何计算采用哪种样式的？
+style 1000分
+id      1个100分
+class 1个10分
+标签  1个1分</p>
+
+<pre><code>#page{
+  color: #0ebeff;
+}
+.container{
+  color: #ccc;
+}
+</code></pre>
+
+<pre><code>&lt;div id=&quot;page&quot; class=&quot;container&quot;&gt;
+  我自年少,韶华倾覆。
+&lt;/div&gt;
+</code></pre>
+
+<p>结果显而易见<code>id</code> VS<code>class</code>  100 &gt; 1</p>
+
+<pre><code>#page h1{
+  color: #0ebeff;
+}
+#page .title{
+  color: red;
+}
+</code></pre>
+
+<pre><code>&lt;div id=&quot;page&quot; class=&quot;container&quot;&gt;
+  &lt;h1 class=&quot;title&quot;&gt;我自年少,韶华倾覆。&lt;/h1&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>想一想会使用哪个样式？ 第一个样式 id+标签得分 101 第二个 id+class得分110</p>
+</article>
+                <section class="author">
+                    <div class="avatar" style="background-image: url(/images/avatar.png);"></div>
+                    <a class="name" href="/about.me.html">邓亮泉</a>
+                    <div class="intro">热爱技术  热爱自然。</div>
+                </section>
+                <section class="recommend">
+                    
+                    <section class="nav prev">
+                        <div class="head">上篇文章</div>
+                        <a class="link" href="/docker-base.html">Docker入门简明</a>
+                    </section>
+                    
+                    
+                </section>
+                
+
+            </article>
+        </article>
+        <footer class="footer">
+    <span class="copyright">
+        邓亮泉的博客 ©
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script>
+    </span>
+    <span class="publish">Powered by <a href="http://www.chole.io/" target="_blank">Ink</a></span>
+</footer>
+
+        <script src="/bundle/index.js"></script>
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-93043595-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+    </body>
+</html>
